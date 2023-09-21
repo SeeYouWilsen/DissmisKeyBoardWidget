@@ -20,6 +20,7 @@ class DismissKeyboardWidget extends StatelessWidget {
         final offset = Offset(translation.x, translation.y);
         final paintBounds = renderObject.paintBounds.shift(offset);
         if (paintBounds.contains(event.position)) return;
+        
         FocusManager.instance.primaryFocus?.unfocus();
       },
       child: child,
